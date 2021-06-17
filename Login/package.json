@@ -1,0 +1,30 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "This app for login user and authntication",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "NodeJs",
+    "AngularJs",
+    "JavaScript"
+  ],
+  "author": "Aziza Alhouni",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-jwt": "^0.1.11",
+    "angular-route": "^1.8.2",
+    "bcrypt-nodejs": "0.0.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.12"
+  },
+  "devDependencies": {
+    "mocha": "^8.4.0"
+  }
+}
