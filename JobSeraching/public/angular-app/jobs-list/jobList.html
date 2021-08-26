@@ -1,0 +1,53 @@
+<h1>  
+    {{vm.title}}
+</h1>
+<h1>Search by Title : </h1>
+<form >
+    <input ng-model="search" type="search" name="search" id="">
+</form>
+<ul>
+    <li ng-repeat="job in vm.jobs | filter:search">
+        <a ng-href="#jobs/{{job._id}}">{{job.title}}</a>
+    </li>
+</ul>
+
+<input type="checkbox" ng-model="showForm"> Wants to add a job
+<!-- Create Form to add new job -->
+<form name = "vm.jobForm" ng-submit="vm.addNewJob()" ng-if="showForm">
+To add a new Job opening please fill in all the fields below: <br/><br/>
+<div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" name="title" required ng-model="vm.newJobTitle">
+</div>
+<div class="form-group">
+    <label for="title">Company Name</label>
+    <input type="text" class="form-control" name="company"  ng-model="vm.newCompanyName">
+</div>
+<div class="form-group">
+    <label for="salary">Salary</label>
+    <input type="text" class="form-control" name="salary" required ng-model="vm.newJobSalary">
+</div>
+<div class="form-group">
+Description: <input class="form-control" type="text" name= "description" ng-model="vm.newJobDescription">
+</div>
+<div class="form-group">
+Experience: <input type="text" class="form-control" name="experience" ng-model="vm.newJobExperience">
+</div>
+<div class="form-group">
+Skills: <input type="text" class="form-control" name="skills" ng-model="vm.newJobSkills">
+</div>
+<div class="form-group">
+Location Street : <input type="text" class="form-control" name="street" ng-model="vm.newJobStrt">
+</div>
+<div class="form-group">
+zipCode : <input type="text" class="form-control" name="zipCode" ng-model="vm.newJobzipCode">
+</div>
+<div class="form-group">
+postDate: <input type="text" class="form-control" name="postDate" ng-model="vm.newPostDate">
+</div>
+<div class="form-group">
+    Day Applied: <input type="text" class="form-control" name="dayApplied" ng-model="vm.newDayApplied">
+    </div>
+<button type="submit" class="btn btn-success">Add New Job</button><br/>
+</form>
+
